@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.reservasaulas.modelo;
 
+import java.util.List;
+
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.reservasaulas.modelo.dao.*;
@@ -19,7 +21,7 @@ public class ModeloReservasAulas {
 		reservas = new Reservas();
 	}
 
-	public Aula[] getAulas() {
+	public List<Aula> getAulas() {
 		return aulas.getAulas();
 	}
 
@@ -27,7 +29,7 @@ public class ModeloReservasAulas {
 		return aulas.getNumAulas();
 	}
 
-	public String[] representarAulas() {
+	public List<String> representarAulas() {
 		return aulas.representar();
 	}
 
@@ -43,7 +45,7 @@ public class ModeloReservasAulas {
 		aulas.borrar(aulaBorrar);
 	}
 
-	public Profesor[] getProfesores() {
+	public List<Profesor> getProfesores() {
 		return profesores.getProfesores();
 	}
 
@@ -51,7 +53,7 @@ public class ModeloReservasAulas {
 		return profesores.getNumProfesores();
 	}
 
-	public String[] representarProfesores() {
+	public List<String> representarProfesores() {
 		return profesores.representar();
 	}
 
@@ -67,7 +69,7 @@ public class ModeloReservasAulas {
 		profesores.borrar(profesorBorrar);
 	}
 
-	public Reserva[] getReservas() {
+	public List<Reserva> getReservas() {
 		return reservas.getReservas();
 	}
 
@@ -75,7 +77,7 @@ public class ModeloReservasAulas {
 		return reservas.getNumReservas();
 	}
 
-	public String[] representarReservas() {
+	public List<String> representarReservas() {
 		return reservas.representar();
 	}
 
@@ -91,15 +93,15 @@ public class ModeloReservasAulas {
 		reservas.borrar(reservaAnular);
 	}
 
-	public Reserva[] getReservasAula(Aula aulaReservas) {
+	public List<Reserva> getReservasAula(Aula aulaReservas) {
 		return reservas.getReservasAula(aulaReservas);
 	}
 
-	public Reserva[] getReservasProfesor(Profesor profesorReservas) {
+	public List<Reserva> getReservasProfesor(Profesor profesorReservas) {
 		return reservas.getReservasProfesor(profesorReservas);
 	}
 
-	public Reserva[] getReservasPermanencia(Permanencia permanenciaReservas) {
+	public List<Reserva> getReservasPermanencia(Permanencia permanenciaReservas) {
 		return reservas.getReservasPermanencia(permanenciaReservas);
 	}
 
