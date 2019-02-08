@@ -72,7 +72,7 @@ public class Reservas {
 			throw new OperationNotSupportedException("La reserva a anular no existe.");
 		}
 	}
-	
+
 	public List<String> representar() {
 		List<String> representacion = new ArrayList<>();
 		for (Reserva reserva : coleccionReservas) {
