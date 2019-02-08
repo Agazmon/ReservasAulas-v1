@@ -12,7 +12,7 @@ public class Profesores {
 	private List<Profesor> coleccionProfesores;
 
 	public Profesores() {
-		coleccionProfesores= new ArrayList<>();
+		coleccionProfesores = new ArrayList<>();
 	}
 
 	public Profesores(Profesores profesores) {
@@ -45,7 +45,7 @@ public class Profesores {
 	public void insertar(Profesor profesor) throws OperationNotSupportedException {
 		if (profesor == null) {
 			throw new IllegalArgumentException("No se puede insertar un profesor nulo.");
-		} else if(coleccionProfesores.contains(profesor)) {
+		} else if (coleccionProfesores.contains(profesor)) {
 			throw new OperationNotSupportedException("El profesor ya existe.");
 		} else {
 			coleccionProfesores.add(profesor);
@@ -54,7 +54,7 @@ public class Profesores {
 
 	public Profesor buscar(Profesor profesor) {
 		int indice = coleccionProfesores.indexOf(profesor);
-		if (indice!=-1) {
+		if (indice != -1) {
 			return new Profesor(coleccionProfesores.get(indice));
 		} else {
 			return null;
@@ -64,7 +64,8 @@ public class Profesores {
 	public void borrar(Profesor profesor) throws OperationNotSupportedException {
 		if (profesor == null) {
 			throw new IllegalArgumentException("No se puede borrar un profesor nulo.");
-		} if (!coleccionProfesores.remove(profesor)){
+		}
+		if (!coleccionProfesores.remove(profesor)) {
 			throw new OperationNotSupportedException("El profesor a borrar no existe.");
 		}
 	}
