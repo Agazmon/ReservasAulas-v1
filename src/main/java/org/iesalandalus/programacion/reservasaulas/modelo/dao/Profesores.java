@@ -48,7 +48,7 @@ public class Profesores {
 		} else if (coleccionProfesores.contains(profesor)) {
 			throw new OperationNotSupportedException("El profesor ya existe.");
 		} else {
-			coleccionProfesores.add(profesor);
+			coleccionProfesores.add(new Profesor(profesor));
 		}
 	}
 

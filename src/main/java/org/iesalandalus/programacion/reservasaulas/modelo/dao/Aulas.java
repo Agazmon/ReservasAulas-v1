@@ -48,7 +48,7 @@ public class Aulas {
 		} else if (coleccionAulas.contains(aula)) {
 			throw new OperationNotSupportedException("El aula ya existe.");
 		} else {
-			coleccionAulas.add(aula);
+			coleccionAulas.add(new Aula(aula));
 		}
 
 	}

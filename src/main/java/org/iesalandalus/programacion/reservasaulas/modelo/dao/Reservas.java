@@ -51,7 +51,7 @@ public class Reservas {
 		} else if (coleccionReservas.contains(reserva)) {
 			throw new OperationNotSupportedException("La reserva ya existe.");
 		} else {
-			coleccionReservas.add(reserva);
+			coleccionReservas.add(new Reserva(reserva));
 		}
 	}
 
@@ -76,7 +76,7 @@ public class Reservas {
 	public List<String> representar() {
 		List<String> representacion = new ArrayList<>();
 		for (Reserva reserva : coleccionReservas) {
-			representacion.add(reserva.toString());
+			representacion.add(new Reserva(reserva).toString());
 		}
 		return representacion;
 	}
@@ -85,7 +85,7 @@ public class Reservas {
 		List<Reserva> reservasProfesor = new ArrayList<>();
 		for (Reserva reserva : coleccionReservas) {
 			if (reserva.getProfesor().equals(profesor)) {
-				reservasProfesor.add(reserva);
+				reservasProfesor.add(new Reserva(reserva));
 			}
 		}
 		return reservasProfesor;
@@ -95,7 +95,7 @@ public class Reservas {
 		List<Reserva> reservasAula = new ArrayList<>();
 		for (Reserva reserva : coleccionReservas) {
 			if (reserva.getAula().equals(aula)) {
-				reservasAula.add(reserva);
+				reservasAula.add(new Reserva(reserva));
 			}
 		}
 		return reservasAula;
@@ -105,7 +105,7 @@ public class Reservas {
 		List<Reserva> reservasPermanencia = new ArrayList<>();
 		for (Reserva reserva : coleccionReservas) {
 			if (reserva.getPermanencia().equals(permanencia)) {
-				reservasPermanencia.add(reserva);
+				reservasPermanencia.add(new Reserva(reserva));
 			}
 		}
 		return reservasPermanencia;
